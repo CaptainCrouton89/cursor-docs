@@ -1,4 +1,3 @@
-<documentation>
 # Modern AI System Prompts: Comprehensive Guide
 
 ## 1. Architectural Patterns
@@ -63,4 +62,3 @@
 - Communication models prioritize clarity, user experience, and actionable outputs.
 - Domain specialization and safety mechanisms are integral for effective, responsible AI.
 - Implementation requires careful structuring, clear instructions, and robust error/context management.
-  </documentation>
