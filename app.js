@@ -4,7 +4,7 @@ const fs = require("fs-extra");
 const marked = require("marked");
 
 const app = express();
-const PORT = process.env.PORT || 3990;
+const PORT = process.env.PORT || 3000;
 
 // Middleware for parsing form data
 app.use(express.urlencoded({ extended: true }));
@@ -246,7 +246,10 @@ Your content here..."
             errorAlert.style.display = 'none';
             
             try {
-              const response = await fetch('/api/create-page', {
+              // Use either the API route or the serverless function depending on environment
+              const endpoint = '/api/create-page';
+              
+              const response = await fetch(endpoint, {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
@@ -390,7 +393,12 @@ async function generateTOC(dir, basePath = "") {
   return html;
 }
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Documentation server running at http://localhost:${PORT}`);
-});
+// For local development
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Documentation server running at http://localhost:${PORT}`);
+  });
+}
+
+// Export the Express app for Vercel
+module.exports = app;
