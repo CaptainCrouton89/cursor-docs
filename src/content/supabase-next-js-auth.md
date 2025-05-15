@@ -1,9 +1,3 @@
----
-# Specify the following for Cursor rules
-description: Guidelines for writing Next.js apps with Supabase Auth
-alwaysApply: false
----
-
 # Bootstrap Next.js app with Supabase Auth
 
 ## Overview of implementing Supabase Auth SSR
