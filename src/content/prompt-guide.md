@@ -55,6 +55,16 @@
 
 ## Essential Code/Schema Example
 
+```json
+{
+  "name": "message_notify_user",
+  "parameters": {
+    "text": "Message to display",
+    "attachments": ["/path/to/file1", "/path/to/file2"]
+  }
+}
+```
+
 ## Key Takeaways
 
 - Modern AI prompts are structured, modular, and function-driven.

@@ -1,64 +1,36 @@
-# Cursor Docs
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A simple Express application to serve markdown documentation.
+## Getting Started
 
-## Installation
-
-```bash
-npm install
-```
-
-## Running the Server Locally
+First, run the development server:
 
 ```bash
-npm run dev   # Run with auto-reload
+npm run dev
 # or
-npm start     # Run without auto-reload
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-The server will start on port 3990 by default. You can access it at http://localhost:3990.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Documentation Structure
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Documentation is stored as markdown files in the `public` directory. The directory structure is used to generate the table of contents.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- `/` - Table of contents (automatically generated)
-- `/ai/prompt-guide` - Guide to modern AI system prompts
+## Learn More
 
-## Adding New Documentation
+To learn more about Next.js, take a look at the following resources:
 
-You can add new documentation pages in two ways:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-1. **Using the web interface**: Click the "Add New" button at the top of the home page
-2. **Manually**: Create a new markdown file in the appropriate directory inside `public/`
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploying to Vercel
+## Deploy on Vercel
 
-This application is ready to be deployed to Vercel. Follow these steps:
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-1. **Install Vercel CLI** (optional):
-
-   ```bash
-   npm install -g vercel
-   ```
-
-2. **Deploy using Vercel CLI**:
-
-   ```bash
-   vercel
-   ```
-
-3. **Or deploy using the Vercel Dashboard**:
-
-   - Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
-   - Import the repository into Vercel
-   - Vercel will automatically detect the configuration and deploy the application
-
-4. **Environment Variables**:
-   No additional environment variables are required for basic functionality.
-
-## Customization
-
-- Update the styles in the app.js file to customize the appearance of the documentation
-- Modify the table of contents generation logic in the `generateTOC` function
-- Add more markdown files to expand your documentation
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
