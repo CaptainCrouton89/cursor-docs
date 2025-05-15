@@ -14,9 +14,9 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const post = getPostBySlug(params.slug);
+  const post = getPostBySlug((await params).slug);
 
   if (!post) {
     return {
@@ -30,8 +30,12 @@ export async function generateMetadata({
 }
 
 // The page component that displays completely raw markdown
-export default function DocumentPage({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug);
+export default async function DocumentPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const post = getPostBySlug((await params).slug);
 
   if (!post) {
     notFound();
