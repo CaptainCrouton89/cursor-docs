@@ -351,7 +351,6 @@ async function generateTableOfContents(req, res, next) {
             <h1>Documentation</h1>
             <a href="/add-new" class="btn">Add New</a>
           </div>
-          <p>Welcome to the documentation. Please select a topic from the table of contents below:</p>
           ${toc}
         </div>
       </body>
